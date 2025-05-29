@@ -110,7 +110,7 @@ def initialize_index():
 def create_enhanced_query_engine(index):
     """Создает настроенный query engine с улучшенными параметрами"""
     return index.as_query_engine(
-        similarity_top_k=12,  # Больше релевантных документов
+        similarity_top_k=30,  # Больше релевантных документов
         response_mode="tree_summarize",  # Лучший режим для детальных ответов
         text_qa_template=DETAILED_QA_PROMPT,  # Кастомный промпт для русского языка
         streaming=False,  # Отключаем streaming для полных ответов
