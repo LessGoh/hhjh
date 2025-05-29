@@ -151,13 +151,13 @@ def format_response(result: dict) -> str:
 
 def main():
     st.set_page_config(
-        page_title="AI Финансовый Эксперт на русском",
+        page_title="Arxiv+Llama+OpenAI Q/A assist",
         page_icon="🤖",
         layout="wide"
     )
     
-    st.title("🤖 AI Финансовый Эксперт")
-    st.markdown("💡 **Получите подробные экспертные ответы на русском языке по финансам и портфельному управлению**")
+    st.title("🤖 Arxiv+Llama+OpenAI Q/A assist")
+    st.markdown("💡 **Раз раз это хардбас**")
     
     # Проверяем API ключи при запуске
     llamaindex_key, openai_key = get_api_keys()
@@ -186,7 +186,7 @@ def main():
         
         # Получаем ответ от LlamaIndex
         with st.chat_message("assistant"):
-            with st.spinner("🔍 Анализирую документы и составляю подробный ответ на русском языке..."):
+            with st.spinner("🔍 Анализ..."):
                 result = query_llamaindex(prompt)
                 formatted_response = format_response(result)
             st.markdown(formatted_response)
