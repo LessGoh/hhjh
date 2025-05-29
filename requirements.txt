@@ -1,0 +1,3 @@
+streamlit>=1.28.0
+llama-index>=0.10.0
+llama-index-indices-managed-llama-cloud>=0.3.0
